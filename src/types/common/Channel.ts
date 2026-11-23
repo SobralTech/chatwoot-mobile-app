@@ -1,5 +1,6 @@
 export type Channel =
   | 'Channel::Whatsapp'
+  | 'Channel::Waha'
   | 'Channel::WebWidget'
   | 'Channel::TwitterProfile'
   | 'Channel::TwilioSms'
@@ -27,6 +28,7 @@ export const InboxTypes = {
   TWITTER: 'Channel::TwitterProfile',
   TWILIO: 'Channel::TwilioSms',
   WHATSAPP: 'Channel::Whatsapp',
+  WAHA: 'Channel::Waha',
   API: 'Channel::Api',
   EMAIL: 'Channel::Email',
   TELEGRAM: 'Channel::Telegram',
