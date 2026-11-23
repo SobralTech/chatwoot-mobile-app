@@ -69,7 +69,11 @@ export const isAWahaChannel = (inbox: Inbox | undefined) => {
 };
 
 export const isAWhatsAppChannel = (inbox: Inbox | undefined) => {
-  return inbox?.channelType === INBOX_TYPES.WHATSAPP || isAWahaChannel(inbox) || isATwilioWhatsAppChannel(inbox);
+  return (
+    inbox?.channelType === INBOX_TYPES.WHATSAPP ||
+    isAWahaChannel(inbox) ||
+    isATwilioWhatsAppChannel(inbox)
+  );
 };
 
 export const is360DialogWhatsAppChannel = (inbox: Inbox | undefined) => {
