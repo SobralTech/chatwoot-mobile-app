@@ -42,7 +42,10 @@ export const DeliveryStatus = (props: DeliveryStatusProps) => {
   const isSent = status === MESSAGE_STATUS.SENT;
   const isFailed = status === MESSAGE_STATUS.FAILED;
   const isEmailChannel = channel === INBOX_TYPES.EMAIL;
-  const isAWhatsappChannel = channel === INBOX_TYPES.TWILIO || channel === INBOX_TYPES.WHATSAPP;
+  const isAWhatsappChannel =
+    channel === INBOX_TYPES.TWILIO ||
+    channel === INBOX_TYPES.WHATSAPP ||
+    channel === INBOX_TYPES.WAHA;
   const isATelegramChannel = channel === INBOX_TYPES.TELEGRAM;
   const isATwilioChannel = channel === INBOX_TYPES.TWILIO;
   const isAFacebookChannel = channel === INBOX_TYPES.FB;

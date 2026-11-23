@@ -9,6 +9,7 @@ export const INBOX_FEATURE_MAP = {
     INBOX_TYPES.WEB,
     INBOX_TYPES.TWITTER,
     INBOX_TYPES.WHATSAPP,
+    INBOX_TYPES.WAHA,
     INBOX_TYPES.TELEGRAM,
     INBOX_TYPES.TIKTOK,
     INBOX_TYPES.API,
@@ -17,6 +18,7 @@ export const INBOX_FEATURE_MAP = {
     INBOX_TYPES.WEB,
     INBOX_TYPES.TWITTER,
     INBOX_TYPES.WHATSAPP,
+    INBOX_TYPES.WAHA,
     INBOX_TYPES.TELEGRAM,
     INBOX_TYPES.TIKTOK,
     INBOX_TYPES.API,
@@ -62,8 +64,16 @@ export const isATwilioSMSChannel = (inbox: Inbox | undefined) => {
   return inbox?.channelType === INBOX_TYPES.TWILIO && inbox.medium === 'sms';
 };
 
+export const isAWahaChannel = (inbox: Inbox | undefined) => {
+  return inbox?.channelType === INBOX_TYPES.WAHA;
+};
+
 export const isAWhatsAppChannel = (inbox: Inbox | undefined) => {
-  return inbox?.channelType === INBOX_TYPES.WHATSAPP || isATwilioWhatsAppChannel(inbox);
+  return (
+    inbox?.channelType === INBOX_TYPES.WHATSAPP ||
+    isAWahaChannel(inbox) ||
+    isATwilioWhatsAppChannel(inbox)
+  );
 };
 
 export const is360DialogWhatsAppChannel = (inbox: Inbox | undefined) => {

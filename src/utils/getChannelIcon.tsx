@@ -29,7 +29,7 @@ const isATwilioSMSChannel = (channelType: Channel, medium: string) => {
 };
 
 const isAWhatsAppChannel = (channelType: Channel) => {
-  return channelType === InboxTypes.WHATSAPP;
+  return channelType === InboxTypes.WHATSAPP || channelType === InboxTypes.WAHA;
 };
 
 export const getChannelIcon = (channelType: Channel, medium: string, additionalType: string) => {
