@@ -31,7 +31,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     },
     android: {
       adaptiveIcon: { foregroundImage: './assets/adaptive-icon.png', backgroundColor: '#ffffff' },
-      package: 'com.chatwoot.app',
+      package: 'com.sobraltech.chatwoot',
       permissions: [
         'android.permission.CAMERA',
         'android.permission.RECORD_AUDIO',
